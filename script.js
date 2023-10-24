@@ -1,27 +1,26 @@
-(function () {
+ (function () {
   const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
+
   let today = new Date(),
       dd = String(today.getDate()).padStart(2, "0"),
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy + 1,
       dayMonth = "10/25/",
-      birthday = dayMonth + yyyy;
+      examDate = dayMonth + yyyy;
   
   today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
+  if (today > examDate) {
+    examDate = dayMonth + nextYear;
   }
   // Set the target time to 11 AM
-  birthday += " 11:00:00";
+  examDate += " 10:15:00";
 
-  const countDown = new Date(birthday).getTime(),
+  const countDown = new Date(examDate).getTime(),
       x = setInterval(function() {    
 
         const now = new Date().getTime(),
