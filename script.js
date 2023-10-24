@@ -18,7 +18,7 @@
     examDate = dayMonth + nextYear;
   }
   // Set the target time to 11 AM
-  examDate += " 01:30:00";
+  examDate += " 13:30:00";
 
   const countDown = new Date(examDate).getTime(),
       x = setInterval(function() {    
